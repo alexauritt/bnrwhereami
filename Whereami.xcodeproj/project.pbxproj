@@ -18,6 +18,7 @@
 		A7C3E50116A0A4F9003C2C63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7C3E50016A0A4F9003C2C63 /* Default-568h@2x.png */; };
 		A7C3E50416A0A4F9003C2C63 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C3E50316A0A4F9003C2C63 /* WhereamiViewController.m */; };
 		A7C3E50716A0A4F9003C2C63 /* WhereamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7C3E50516A0A4F9003C2C63 /* WhereamiViewController.xib */; };
+		A7C3E50E16A0A61F003C2C63 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7C3E50D16A0A61F003C2C63 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A7C3E50216A0A4F9003C2C63 /* WhereamiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
 		A7C3E50316A0A4F9003C2C63 /* WhereamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
 		A7C3E50616A0A4F9003C2C63 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WhereamiViewController.xib; sourceTree = "<group>"; };
+		A7C3E50D16A0A61F003C2C63 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7C3E50E16A0A61F003C2C63 /* CoreLocation.framework in Frameworks */,
 				A7C3E4EB16A0A4F9003C2C63 /* UIKit.framework in Frameworks */,
 				A7C3E4ED16A0A4F9003C2C63 /* Foundation.framework in Frameworks */,
 				A7C3E4EF16A0A4F9003C2C63 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +76,7 @@
 		A7C3E4E916A0A4F9003C2C63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7C3E50D16A0A61F003C2C63 /* CoreLocation.framework */,
 				A7C3E4EA16A0A4F9003C2C63 /* UIKit.framework */,
 				A7C3E4EC16A0A4F9003C2C63 /* Foundation.framework */,
 				A7C3E4EE16A0A4F9003C2C63 /* CoreGraphics.framework */,
