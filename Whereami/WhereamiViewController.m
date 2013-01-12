@@ -20,10 +20,12 @@
 
     if (self) {
         locationManager = [[CLLocationManager alloc] init];
-        
+                
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+        locationManager.distanceFilter = 50;
         [locationManager startUpdatingLocation];
+
     }
     
     return self;
