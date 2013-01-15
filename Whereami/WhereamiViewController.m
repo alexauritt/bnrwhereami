@@ -24,8 +24,6 @@
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         locationManager.distanceFilter = 50;
-        [locationManager startUpdatingLocation];
-
     }
     
     return self;
@@ -40,6 +38,18 @@
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
+}
+
+- (void)viewDidLoad
+{
+    [worldView setShowsUserLocation:YES];
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 2500, 2500);
+    [worldView setRegion:region animated:YES];
 }
 
 - (void)dealloc
