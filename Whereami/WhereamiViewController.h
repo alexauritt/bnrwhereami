@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 
 @interface WhereamiViewController : UIViewController
-    <CLLocationManagerDelegate, MKMapViewDelegate>
+    <CLLocationManagerDelegate, MKMapViewDelegate, UITextFieldDelegate>
 {
     CLLocationManager *locationManager;
 

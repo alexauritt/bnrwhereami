@@ -52,6 +52,13 @@
     [worldView setRegion:region animated:YES];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self findLocation];
+    [textField resignFirstResponder];
+    return YES;
+}
+
 - (void)dealloc
 {
     [locationManager setDelegate:nil];
