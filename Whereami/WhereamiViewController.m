@@ -52,6 +52,7 @@
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
+    worldView.mapType = MKMapTypeSatellite;
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
