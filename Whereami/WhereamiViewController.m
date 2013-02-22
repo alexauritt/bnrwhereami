@@ -69,8 +69,25 @@
     return YES;
 }
 
+- (IBAction)changeSeg {
+    NSLog(@"segment change");
+    switch ([mapTypeControl selectedSegmentIndex]) {
+        case 0:
+            NSLog(@"Standard!");
+            break;
+        case 1:
+            NSLog(@"Satellite");
+            break;
+        case 2:
+            NSLog(@"Hybrid!");
+            break;
+            
+    }
+}
+
 - (void)findLocation
 {
+    NSLog(@"finding location");
     [locationManager startUpdatingLocation];
     [activityIndicator startAnimating];
     [locationTitleField setHidden:YES];
