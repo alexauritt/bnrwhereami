@@ -25,6 +25,7 @@
         [locationManager setDelegate:self];
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
         locationManager.distanceFilter = 50;
+        
     }
     
     return self;
@@ -52,7 +53,7 @@
 - (void)viewDidLoad
 {
     [worldView setShowsUserLocation:YES];
-    worldView.mapType = MKMapTypeSatellite;
+    worldView.mapType = MKMapTypeStandard;
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -69,19 +70,17 @@
     return YES;
 }
 
-- (IBAction)changeSeg {
-    NSLog(@"segment change");
-    switch ([mapTypeControl selectedSegmentIndex]) {
+- (IBAction)changeMap:(UISegmentedControl *)control {
+    switch ([control selectedSegmentIndex]) {
         case 0:
-            NSLog(@"Standard!");
+            worldView.mapType = MKMapTypeStandard;
             break;
         case 1:
-            NSLog(@"Satellite");
+            worldView.mapType = MKMapTypeSatellite;
             break;
         case 2:
-            NSLog(@"Hybrid!");
+            worldView.mapType = MKMapTypeHybrid;
             break;
-            
     }
 }
 
