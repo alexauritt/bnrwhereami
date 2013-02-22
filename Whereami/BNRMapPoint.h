@@ -14,10 +14,12 @@
 {
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)c title:(NSString *)t;
+- (id)initWithCoordinate:(CLLocationCoordinate2D)c description:(NSString *)des andDate:(NSDate *)d;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *description;
+@property (nonatomic, copy) NSDate *date;
 
 @end

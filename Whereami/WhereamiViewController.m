@@ -96,7 +96,7 @@
 {
     CLLocationCoordinate2D coord = [loc coordinate];
     
-    BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord title:[locationTitleField text]];
+    BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord description:[locationTitleField text] andDate:[NSDate date]];
     [worldView addAnnotation:mp];
     
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
